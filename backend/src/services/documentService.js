@@ -31,7 +31,7 @@ function buildDocumentService({
   function getDocumentDownload({ id, owner } = {}) {
     const documentRecord = documentRepository.findById(id);
 
-    if (!documentRecord || (owner && documentRecord.owner !== owner)) {
+    if (!documentRecord || !owner || documentRecord.owner !== owner) {
       return null;
     }
 

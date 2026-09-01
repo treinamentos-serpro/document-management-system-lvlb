@@ -108,5 +108,6 @@ test('getDocumentDownload retorna null para documento inexistente ou sem permiss
   });
 
   assert.strictEqual(documentService.getDocumentDownload({ id: 'doc-2' }), null);
+  assert.strictEqual(documentService.getDocumentDownload({ id: 'doc-1' }), null);
   assert.strictEqual(documentService.getDocumentDownload({ id: 'doc-1', owner: 'maria' }), null);
 });
