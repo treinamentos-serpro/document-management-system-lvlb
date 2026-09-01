@@ -22,7 +22,12 @@ export default function DownloadButton({ documentId, userId, onError }) {
   }
 
   return (
-    <button className="text-button" disabled={isDownloading} onClick={handleDownload} type="button">
+    <button
+      className="border-0 bg-transparent py-2 pl-2.5 font-bold text-terracotta-400 transition-colors hover:text-terracotta-700 disabled:cursor-wait disabled:opacity-55"
+      disabled={isDownloading}
+      onClick={handleDownload}
+      type="button"
+    >
       {isDownloading ? 'Baixando...' : 'Baixar'}
     </button>
   );
